@@ -1,0 +1,142 @@
+/* Minimalist Reset and Fonts */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;  /* Dark background */
+  color: #e0e0e0;  /* Light text */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #4CAF50;  /* Highlight color for title */
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+.time-card:hover {
+  transform: translateY(-3px);
+}
+
+.time-card h2 {
+  font-size: 1.3em;
+  margin-top: 0;
+  color: #81C784;
+  /* Lighter shade of green */
+}
+
+/* The actual time text */
+.time {
+  font-family: monospace;
+  /* Monospace font looks great for clocks */
+  font-size: 3.5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ffffff;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Time Zone Cards Layout (CSS Grid) */
+.clock-display {
+  display: grid;  /* 2 columns on desktop, 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.time-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-left: 5px solid #4CAF50;
+  /* Accent line */
+}
+
+.time-card h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+  color: #81C784;
+}
+
+/* Large Time Display */
+.time {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Local Time Display */
+#local-time-display {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #b0b0b0;
+}
+
+/*Format for Converter Tool*/
+/* Converter Tool Styles */
+.converter-tool {
+  max-width: 800px;
+  margin: 60px auto 20px;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.converter-tool h2 {
+  color: #4CAF50;
+}
+
+.input-group {
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #b0b0b0;
+}
+
+input[type="time"],
+select,
+#convert-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+#convert-button {
+  background-color: #4CAF50;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#convert-button:hover {
+  background-color: #66BB6A;
+}
+
+.converter-results {
+  /* Reuse the clock-display grid layout */
+  margin-top: 30px;
+}
+
+/* Style for result cards */
+.converter-results .time-card {
+  border-left: 5px solid #2196F3;
+  /* Use a different accent color */
+  padding: 15px;
+}
+

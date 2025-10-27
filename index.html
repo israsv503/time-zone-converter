@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U.S. Time Zone Converter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>U.S. Remote Time Clock</h1>
+    <p id="local-time-display">Your Local Time: Loading...</p>
+  </header>
+
+  <main class="clock-display">
+    <div class="time-card" id="time-est">
+      <h2>EST (Eastern)</h2>
+      <p class="time">--:--:--:</p>
+    </div>
+    <div class="time-card" id="time-cst">
+      <h2>CST (Central)</h2>
+      <p class="time">--:--:--:</p>      
+    </div>
+    <div class="time-card" id="time-mst">
+      <h2>MST (Mountain)</h2>
+      <p class="time">--:--:--</p>
+    </div>
+    <div class="time-card" id="time-pst">
+      <h2>PST (Pacific)</h2>
+      <p class="time">--:--:--</p>
+    </div>    
+  </main>
+
+  <section class="converter-tool">
+    <h2>Remote Meeting Planner</h2>
+    <div class="input-group">
+      <label for="time-input">I plan to start a meeting at:</label>
+      <input type="time" id="time-input" value="09:00">
+    </div>
+  
+    <div class="input-group">
+      <label for="timezone-select">In my time zone:</label>
+      <select id="timezone-select">
+        <option value="America/Los_Angeles">Pacific Time (PST/PDT)</option>
+        <option value="America/New_York" selected>Eastern Time (EST/EDT)</option>
+        <option value="Europe/London">London (GMT/BST)</option>
+        <option value="Europe/Paris">Paris (CET/CEST)</option>
+        <option value="Asia/Tokyo">Tokyo (JST)</option>
+        <option value="Asia/Kolkata">Kolkata (IST)</option>
+      </select>
+    </div>
+  
+    <button id="convert-button">Convert Time</button>
+  
+    <div id="conversion-results" class="clock-display converter-results">
+    </div>
+  </section>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
